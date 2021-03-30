@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0b0e11;
+    color: white;
+}
+
+.wrapper {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    padding-top: 1rem;
+    align-items: center;
+}
+
+.wrapper h1 {
+    color: #fd4d4d;
+    margin-bottom: 3rem;
+    font-size: 30pt;
+}
+
+.wrapper p {
+    font-size: 18pt;
+}
+
+.wrapper-choices {
+    width: 1000px;
+    height: 400px;
+    margin: 0px 0px 50px 0px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.wrapper-choices i {
+    padding: 80px;
+    background-color: white;
+    border-radius: 50%;
+    font-size: 50pt;
+    margin: 0px 50px;
+}
+
+.wrapper-choices i:hover {
+    cursor: pointer;
+
+}
+
+.fa-hand-rock {
+    color: #fd4d4d;
+}
+
+.fa-hand-paper {
+    color: #3ae57f;
+}
+
+.fa-hand-scissors {
+    color: #4169e1;
+}
+
+h3 {
+    margin: 10px;
+}
+
+.winner {
+    margin: 50px 0px;
+}
+
+.ripple {
+    background-position: center;
+    transition: background 0.8s;
+  }
+  .ripple:hover {
+    background: rgb(210, 210, 210) radial-gradient(circle, transparent 1%, rgb(210, 210, 210) 1%) center/15000%;
+  }
+  .ripple:active {
+    background-color: white;
+    background-size: 100%;
+    transition: background 0s;
+  }
+
+  .userWins {
+      position: absolute;
+      left: 50px;
+      top: 20px;
+  }
+
+  .computerWins {
+      position: absolute;
+      right: 50px;
+      top: 20px;
+  }
+
+  @media only screen 
+    and (device-width : 375px) 
+    and (device-height : 812px) 
+    and (-webkit-device-pixel-ratio : 3) { 
+        
+    }
+
