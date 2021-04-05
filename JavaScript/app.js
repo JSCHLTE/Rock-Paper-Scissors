@@ -11,28 +11,24 @@ const gamesPlayed = document.querySelector(".gamesPlayed");
 let userWins = 0;
 let computerWins = 0;
 
-game = ()=>{
-
     rock.addEventListener("click", ()=>{
         let rng = Math.floor(Math.random()*3);
         appendUserChoice.innerHTML = `You chose: rock`;
         if(rng == 0){
             appendComputerChoice.innerHTML = `Computer chose: rock`;
-            appendWinner.innerHTML = `The match is a tie.`
+            appendWinner.innerHTML = `The match is a tie.`;
         }
         if(rng == 1){
             appendComputerChoice.innerHTML = `Computer chose: paper`;
-            appendWinner.innerHTML = `Computer wins!`
+            appendWinner.innerHTML = `Computer wins!`;
             computerWins++;
         }
         if(rng == 2){
             appendComputerChoice.innerHTML = `Computer chose: scissors`;
-            appendWinner.innerHTML = `You win!`
+            appendWinner.innerHTML = `You win!`;
             userWins++;
         }
-        appendUserWinCount.innerHTML = (userWins > 1 || userWins == 0) ? `${userWins} wins`: `${userWins} win`;
-        appendComputerWinCount.innerHTML = (computerWins > 1 || computerWins == 0) ? `${computerWins} wins`: `${computerWins} win`;
-        gamesPlayed.innerHTML++;
+        append();
     });
 
     paper.addEventListener("click", ()=>{
@@ -40,21 +36,19 @@ game = ()=>{
         appendUserChoice.innerHTML = `You chose: paper`;
         if(rng == 0){
             appendComputerChoice.innerHTML = `Computer chose: rock`;
-            appendWinner.innerHTML = `You win!`
+            appendWinner.innerHTML = `You win!`;
             userWins++;
         }
         if(rng == 1){
             appendComputerChoice.innerHTML = `Computer chose: paper`;
-            appendWinner.innerHTML = `The match is a tie.`
+            appendWinner.innerHTML = `The match is a tie.`;
         }
         if(rng == 2){
             appendComputerChoice.innerHTML = `Computer chose: scissors`;
-            appendWinner.innerHTML = `Computer wins!`
+            appendWinner.innerHTML = `Computer wins!`;
             computerWins++;
         }
-        appendUserWinCount.innerHTML = (userWins > 1 || userWins == 0) ? `${userWins} wins`: `${userWins} win`;
-        appendComputerWinCount.innerHTML = (computerWins > 1 || computerWins == 0) ? `${computerWins} wins`: `${computerWins} win`;
-        gamesPlayed.innerHTML++;
+        append();
     });
 
     scissors.addEventListener("click", ()=>{
@@ -62,22 +56,23 @@ game = ()=>{
         appendUserChoice.innerHTML = `You chose: scissors`;
         if(rng == 0){
             appendComputerChoice.innerHTML = `Computer chose: rock`;
-            appendWinner.innerHTML = `Computer wins!`
+            appendWinner.innerHTML = `Computer wins!`;
             computerWins++;
         }
         if(rng == 1){
             appendComputerChoice.innerHTML = `Computer chose: paper`;
-            appendWinner.innerHTML = `You win!`
+            appendWinner.innerHTML = `You win!`;
             userWins++;
         }
         if(rng == 2){
             appendComputerChoice.innerHTML = `Computer chose: scissors`;
-            appendWinner.innerHTML = `The match is a tie.`
+            appendWinner.innerHTML = `The match is a tie.`;
         }
+        append();
+    });
+
+    append = () =>{
         appendUserWinCount.innerHTML = (userWins > 1 || userWins == 0) ? `${userWins} wins`: `${userWins} win`;
         appendComputerWinCount.innerHTML = (computerWins > 1 || computerWins == 0) ? `${computerWins} wins`: `${computerWins} win`;
         gamesPlayed.innerHTML++;
-    });
-};
-
-game();
+    };

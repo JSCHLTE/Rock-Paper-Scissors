@@ -18,7 +18,7 @@ body {
     align-items: center;
 }
 
-.wrapper h1 {
+.wrapper-title {
     color: #fd4d4d;
     margin-bottom: 3rem;
     font-size: 30pt;
@@ -43,6 +43,11 @@ body {
     border-radius: 50%;
     font-size: 50pt;
     margin: 0px 50px;
+    transition: 0.3s ease;
+}
+.wrapper-choices i:hover {
+    transform: translateY(-10px);
+    opacity: 0.9;
 }
 
 .wrapper-choices i:hover {
@@ -55,7 +60,7 @@ body {
 }
 
 .fa-hand-paper {
-    color: #3ae57f;
+    color: #20ad58;
 }
 
 .fa-hand-scissors {
@@ -95,10 +100,34 @@ h3 {
       top: 20px;
   }
 
-  @media only screen 
-    and (device-width : 375px) 
-    and (device-height : 812px) 
-    and (-webkit-device-pixel-ratio : 3) { 
-        
+@media screen and (max-width: 812px){
+    .wrapper-title {
+        color: #fd4d4d;
+        margin-bottom: 3rem;
+        font-size: 20pt;
     }
 
+    .userWins, .computerWins{
+        font-size: 15pt;
+    }
+
+    .userWins {
+        top: 60px;
+        left: 10px;
+    }
+
+    .computerWins {
+        top: 60px;
+        right: 10px;
+    }
+
+    .wrapper-choices i {
+        padding: 40px;
+    }
+
+    .wrapper-choices {
+        flex-direction: column;
+        margin: 20rem;
+        width: 100vw;
+    }
+};
